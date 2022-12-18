@@ -53,5 +53,15 @@ public class TicTacToe {
         System.out.println("- + - + -");
         System.out.println(board[7]+" | "+ board[9]+" | "+ board[9]);
     }
-    
+    public void uc4_makeMove(){
+        System.out.println(" ");
+        System.out.println("Select a location to make a move");
+        int move=sc.nextInt();
+        if(board[move]==' '){
+            System.out.println("This location is available");
+        }
+        else{
+            System.out.println("This location is not available");
+        }
+    }
 }

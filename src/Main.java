@@ -7,5 +7,6 @@ public class Main {
         obj.uc1_gameStarts();
         obj.uc2_selectOption();
         obj.uc3_showBoard();
+        obj.uc4_makeMove();
     }
 }
