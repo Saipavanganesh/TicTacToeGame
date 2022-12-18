@@ -4,13 +4,13 @@ import java.util.Scanner;
 
 public class TicTacToe {
     Scanner sc=new Scanner(System.in);
+    char[] board= new char[10];
     public void welcome(){
         System.out.println("Tic Tac Toe Game");
         System.out.println("****************");
         System.out.println(" ");
     }
-    public void uc1_showBoard(){
-        char[] board= new char[10];
+    public void uc1_gameStarts(){
         for(int i=0;i<10;i++){
             board[i]=' ';
         }
@@ -44,4 +44,14 @@ public class TicTacToe {
                 break;
         }
     }
+    public void uc3_showBoard(){
+        System.out.println(" ");
+        System.out.println("Current Board");
+        System.out.println(board[1]+" | "+ board[2]+" | "+ board[3]);
+        System.out.println("- + - + -");
+        System.out.println(board[4]+" | "+ board[5]+" | "+ board[6]);
+        System.out.println("- + - + -");
+        System.out.println(board[7]+" | "+ board[9]+" | "+ board[9]);
+    }
+    
 }
