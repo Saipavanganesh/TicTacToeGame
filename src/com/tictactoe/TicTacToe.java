@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class TicTacToe {
     Scanner sc=new Scanner(System.in);
     char[] board= new char[10];
+    char userInput,comInput;
     public void welcome(){
         System.out.println("Tic Tac Toe Game");
         System.out.println("****************");
@@ -25,7 +26,6 @@ public class TicTacToe {
         System.out.println(" ");
         System.out.println("Enter X or O to choose as your option");
         char option=sc.next().charAt(0);
-        char userInput,comInput;
         switch(option){
             case 'X':
             case 'x':
@@ -51,17 +51,26 @@ public class TicTacToe {
         System.out.println("- + - + -");
         System.out.println(board[4]+" | "+ board[5]+" | "+ board[6]);
         System.out.println("- + - + -");
-        System.out.println(board[7]+" | "+ board[9]+" | "+ board[9]);
+        System.out.println(board[7]+" | "+ board[8]+" | "+ board[9]);
     }
     public void uc4_makeMove(){
         System.out.println(" ");
         System.out.println("Select a location to make a move");
         int move=sc.nextInt();
         if(board[move]==' '){
-            System.out.println("This location is available");
+            board[move]=userInput;
+            uc3_showBoard();
         }
         else{
             System.out.println("This location is not available");
+        }
+    }
+    public void uc5_checkFreeSpaces(){
+        System.out.println("Available positions are:");
+        for(int i=1;i<10;i++){
+            if(board[i]==' '){
+                System.out.println(i+" ");
+            }
         }
     }
 }
