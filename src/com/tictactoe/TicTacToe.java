@@ -1,5 +1,6 @@
 package com.tictactoe;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TicTacToe {
@@ -73,4 +74,23 @@ public class TicTacToe {
             }
         }
     }
+    public int uc6_toss(){
+        Random random =new Random();
+        int toss=random.nextInt(2);
+        System.out.println("For Toss, enter your choice: 1 or 0");
+        int tossInput=sc.nextInt();
+        int gameToss;
+        if(toss==tossInput){
+            System.out.println(toss+"You win the toss. You play first");
+            gameToss=1;
+        }
+        else{
+            System.out.println(toss+"You lost the toss. Computer plays first.");
+            gameToss=0;
+        }
+        return gameToss;
+    }
+
+
 }
+

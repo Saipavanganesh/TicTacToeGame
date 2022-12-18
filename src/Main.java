@@ -1,12 +1,13 @@
 import com.tictactoe.TicTacToe;
 
 import java.util.Scanner;
-
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
         TicTacToe obj=new TicTacToe();
         obj.welcome();
+        int tossWon=obj.uc6_toss();
         obj.uc1_gameStarts();
         obj.uc2_selectOption();
         System.out.println(" ");
