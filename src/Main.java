@@ -27,6 +27,7 @@ public class Main {
                     break;
                 case 4:
                     stopPlaying=1;
+                    break;
                 default:
                     System.out.println("Enter correct option");
                     break;
