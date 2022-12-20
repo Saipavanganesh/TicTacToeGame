@@ -13,20 +13,24 @@ public class Main {
         System.out.println(" ");
         int stopPlaying=0;
         do{
+            if(tossWon==1){
+                tossWon=0;
+                obj.uc4_makeMove();
+            }
+            else{
+                obj.uc7_computerMove();
+                tossWon=1;
+            }
             System.out.println("Choose an option");
-            System.out.println("1.Show current board.\n2.Check all the free spaces.\n3.Make your move\n4.Exit");
+            System.out.println("1.Check all the free spaces.\n2.Continue\n3.Exit");
             int option=sc.nextInt();
             switch (option) {
                 case 1:
-                    obj.uc3_showBoard();
-                    break;
-                case 2:
                     obj.uc5_checkFreeSpaces();
                     break;
-                case 3:
-                    obj.uc4_makeMove();
+                case 2:
                     break;
-                case 4:
+                case 3:
                     stopPlaying=1;
                     break;
                 default:
